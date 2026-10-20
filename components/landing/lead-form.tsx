@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { ArrowRight, Check } from 'lucide-react'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
-type Errors = Partial<Record<'nome' | 'whatsapp' | 'ideia' | 'email', string>>
+type Errors = Partial<Record<'nome' | 'whatsapp' | 'ideia', string>>
 
 function formatPhone(value: string) {
   const digits = value.replace(/\D/g, '').slice(0, 11)
@@ -28,31 +28,26 @@ export function LeadForm() {
     const data = new FormData(event.currentTarget)
     const nome = String(data.get('nome') ?? '').trim()
     const whatsapp = String(data.get('whatsapp') ?? '').trim()
-    const email = String(data.get('email') ?? '').trim()
+    const momento = String(data.get('momento') ?? '').trim()
     const ideia = String(data.get('ideia') ?? '').trim()
 
     const nextErrors: Errors = {}
     if (nome.length < 2) nextErrors.nome = 'Informe como prefere ser chamado.'
     if (whatsapp.replace(/\D/g, '').length < 10)
       nextErrors.whatsapp = 'Informe um WhatsApp com DDD.'
-    if (email && !/^\S+@\S+\.\S+$/.test(email))
-      nextErrors.email = 'Esse e-mail parece incompleto.'
     if (ideia.length < 10)
-      nextErrors.ideia = 'Descreva sua ideia em pelo menos uma frase.'
+      nextErrors.ideia = 'Descreva em pelo menos uma frase o que você quer decidir.'
 
     setErrors(nextErrors)
     if (Object.keys(nextErrors).length > 0) return
 
-    const momento = String(data.get('momento') ?? '').trim()
-
     const lines = [
-      'Olá João! Quero conversar sobre o momento do meu negócio.',
+      'Olá João! Quero avaliar se a sessão de validação faz sentido para o meu negócio.',
       '',
       `Nome: ${nome}`,
       `WhatsApp: ${whatsapp}`,
-      email ? `E-mail: ${email}` : null,
-      momento ? `Momento: ${momento}` : null,
-      `Sobre o negócio: ${ideia}`,
+      momento ? `Momento do negócio: ${momento}` : null,
+      `O que quero avaliar ou decidir: ${ideia}`,
     ].filter((line): line is string => line !== null)
 
     const url = buildWhatsAppUrl(lines.join('\n'))
@@ -71,7 +66,7 @@ export function LeadForm() {
         </h3>
         <p className="mt-3 text-ink-soft">
           Abrimos o WhatsApp com os seus dados preenchidos. Basta enviar a
-          mensagem para o João combinar o melhor horário com você.
+          mensagem para o João combinar os próximos passos com você.
         </p>
         <a
           href={whatsappUrl}
@@ -111,7 +106,7 @@ export function LeadForm() {
 
       <div>
         <label htmlFor="whatsapp" className="text-sm font-semibold text-espresso">
-          WhatsApp
+          Seu WhatsApp
         </label>
         <input
           id="whatsapp"
@@ -124,44 +119,19 @@ export function LeadForm() {
           onChange={(event) => setPhone(formatPhone(event.target.value))}
           placeholder="(21) 99999-9999"
           aria-invalid={Boolean(errors.whatsapp)}
-          aria-describedby={errors.whatsapp ? 'whatsapp-erro' : 'whatsapp-dica'}
+          aria-describedby={errors.whatsapp ? 'whatsapp-erro' : undefined}
           className={inputClass}
         />
-        {errors.whatsapp ? (
+        {errors.whatsapp && (
           <p id="whatsapp-erro" className="mt-1.5 text-sm text-bordeaux">
             {errors.whatsapp}
-          </p>
-        ) : (
-          <p id="whatsapp-dica" className="mt-1.5 text-xs text-ink-soft">
-            Usaremos este número para combinar o horário.
-          </p>
-        )}
-      </div>
-
-      <div>
-        <label htmlFor="email" className="text-sm font-semibold text-espresso">
-          E-mail <span className="font-normal text-ink-soft">(opcional)</span>
-        </label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          autoComplete="email"
-          placeholder="seu@email.com"
-          aria-invalid={Boolean(errors.email)}
-          aria-describedby={errors.email ? 'email-erro' : undefined}
-          className={inputClass}
-        />
-        {errors.email && (
-          <p id="email-erro" className="mt-1.5 text-sm text-bordeaux">
-            {errors.email}
           </p>
         )}
       </div>
 
       <div>
         <label htmlFor="momento" className="text-sm font-semibold text-espresso">
-          Em que momento você está?{' '}
+          Em que momento está seu negócio?{' '}
           <span className="font-normal text-ink-soft">(opcional)</span>
         </label>
         <select
@@ -171,26 +141,27 @@ export function LeadForm() {
           className={inputClass}
         >
           <option value="">Prefiro explicar na mensagem</option>
-          <option value="Validando uma ideia">Validando uma ideia</option>
-          <option value="Estruturando uma agência que já tem clientes">
-            Estruturando uma agência que já tem clientes
+          <option value="Estou validando uma ideia">
+            Estou validando uma ideia
           </option>
-          <option value="Crescendo uma agência que já funciona">
-            Crescendo uma agência que já funciona
+          <option value="Estou estruturando minha agência">
+            Estou estruturando minha agência
+          </option>
+          <option value="Quero crescer com mais critério">
+            Quero crescer com mais critério
           </option>
         </select>
       </div>
 
       <div>
         <label htmlFor="ideia" className="text-sm font-semibold text-espresso">
-          Conte em poucas linhas sobre a ideia ou a agência
+          O que você quer avaliar ou decidir neste momento?
         </label>
         <textarea
           id="ideia"
           name="ideia"
           required
           rows={4}
-          placeholder="O que você quer decidir ou melhorar agora?"
           aria-invalid={Boolean(errors.ideia)}
           aria-describedby={errors.ideia ? 'ideia-erro' : undefined}
           className={`${inputClass} resize-y`}
@@ -206,7 +177,7 @@ export function LeadForm() {
         type="submit"
         className="group inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-sm bg-bordeaux px-7 py-3.5 text-base font-semibold text-ivory transition-colors hover:bg-espresso"
       >
-        Enviar para o João no WhatsApp
+        Enviar mensagem para o João pelo WhatsApp
         <ArrowRight
           aria-hidden="true"
           className="size-4 transition-transform group-hover:translate-x-1"
@@ -215,8 +186,7 @@ export function LeadForm() {
 
       <p className="text-xs leading-relaxed text-ink-soft">
         Seus dados não são armazenados neste site. Ao enviar, o WhatsApp abre
-        com uma mensagem já preenchida para o João, e só é enviada se você
-        confirmar.
+        com uma mensagem já preenchida, e ela só é enviada se você confirmar.
       </p>
     </form>
   )
