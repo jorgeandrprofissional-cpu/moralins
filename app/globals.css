@@ -2,6 +2,7 @@
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
 
+
 @theme inline {
   --color-espresso: #3b2a20;
   --color-cream: #efe4d2;
