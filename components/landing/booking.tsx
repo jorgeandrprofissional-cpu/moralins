@@ -2,6 +2,7 @@ import { MessageCircle } from 'lucide-react'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import { LeadForm } from './lead-form'
 
+
 export function Booking() {
   return (
     <section
