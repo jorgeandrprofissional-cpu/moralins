@@ -2,37 +2,29 @@ import Image from 'next/image'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import { CtaLink } from './cta-link'
 
-const facts = [
-  { value: '90 min', label: 'Sessão individual' },
-  { value: '1 PDF', label: 'Com tudo organizado' },
-  { value: '30 dias', label: 'Plano de testes reais' },
-]
-
 export function Hero() {
   return (
-    <section id="topo" className="relative overflow-hidden bg-ivory">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-16 pt-12 sm:px-8 lg:grid-cols-12 lg:gap-10 lg:pb-24 lg:pt-20">
+    <section id="topo" className="bg-ivory">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-16 pt-12 sm:px-8 lg:grid-cols-12 lg:gap-14 lg:pb-24 lg:pt-20">
         <div className="lg:col-span-7">
           <p className="eyebrow rise flex items-center gap-4 text-bordeaux">
             <span aria-hidden="true" className="h-px w-10 bg-bronze" />
-            Para quem tem uma ideia no papel
+            Consultoria para agências e novos negócios
           </p>
 
-          <h1 className="rise rise-delay-1 mt-6 font-serif text-[2.6rem] font-bold leading-[1.06] text-balance text-espresso sm:text-6xl lg:text-[4.25rem]">
-            Descubra se sua ideia vale a pena
-            <span className="mt-3 block text-[0.5em] leading-tight text-ink-soft">
-              (antes de perder tempo e dinheiro)
-            </span>
+          <h1 className="rise rise-delay-1 mt-6 font-serif text-[2.5rem] font-bold leading-[1.08] text-balance text-espresso sm:text-6xl lg:text-[4rem]">
+            Da ideia à agência que cresce, com decisões que têm critério.
           </h1>
 
           <p className="rise rise-delay-2 mt-7 max-w-xl text-lg leading-relaxed text-ink-soft">
-            Chega de perder meses e dinheiro no escuro. Em uma sessão
-            individual, você sai sabendo se sua ideia vale a pena, o que testar
-            primeiro e o que fazer nos próximos 30 dias.
+            Sou João Moralins, consultor de novos negócios. Acompanho quem quer
+            abrir uma agência e quem já tem uma funcionando, avaliando a ideia,
+            a oferta e as prioridades, e dizendo com clareza o que se sustenta
+            e o que não.
           </p>
 
-          <div className="rise rise-delay-3 mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <CtaLink href="#vaga">Quero validar minha ideia</CtaLink>
+          <div className="rise rise-delay-3 mt-9 flex flex-col gap-5 sm:flex-row sm:items-center">
+            <CtaLink href="#contato">Conversar sobre o meu negócio</CtaLink>
             <a
               href={buildWhatsAppUrl()}
               target="_blank"
@@ -43,25 +35,19 @@ export function Hero() {
             </a>
           </div>
 
-          <dl className="mt-12 grid max-w-xl grid-cols-3 gap-6 border-t border-bronze/60 pt-6">
-            {facts.map((fact) => (
-              <div key={fact.value}>
-                <dt className="font-serif text-2xl font-bold text-espresso sm:text-3xl">
-                  {fact.value}
-                </dt>
-                <dd className="mt-1 text-xs leading-snug text-ink-soft sm:text-sm">
-                  {fact.label}
-                </dd>
-              </div>
-            ))}
-          </dl>
+          <p className="mt-10 max-w-md border-l-2 border-bronze pl-4 text-sm leading-relaxed text-ink-soft">
+            O primeiro passo é uma{' '}
+            <a
+              href="#sessao"
+              className="font-semibold text-espresso underline decoration-bronze underline-offset-4 hover:text-bordeaux"
+            >
+              sessão individual de 90 minutos
+            </a>{' '}
+            que termina com um PDF e um plano para os próximos 30 dias.
+          </p>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md lg:col-span-5 lg:max-w-none">
-          <div
-            aria-hidden="true"
-            className="absolute -bottom-4 -right-4 h-full w-full rounded-sm border border-bronze"
-          />
+        <figure className="mx-auto w-full max-w-md lg:col-span-5 lg:max-w-none">
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-cream">
             <Image
               src="/images/joao-moralins-retrato.jpg"
@@ -72,13 +58,11 @@ export function Hero() {
               className="object-cover object-[50%_28%]"
             />
           </div>
-          <div className="absolute -bottom-6 left-4 max-w-[15rem] bg-espresso px-5 py-4 text-ivory shadow-lg sm:left-[-1.5rem]">
-            <p className="eyebrow text-bronze">João Moralins</p>
-            <p className="mt-1 text-sm leading-snug text-cream">
-              Consultor de negócios. Firme no diagnóstico, próximo no trato.
-            </p>
-          </div>
-        </div>
+          <figcaption className="mt-4 flex items-center gap-4 text-sm text-ink-soft">
+            <span aria-hidden="true" className="h-px w-8 bg-bronze" />
+            João Moralins, consultor de novos negócios
+          </figcaption>
+        </figure>
       </div>
     </section>
   )

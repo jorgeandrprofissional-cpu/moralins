@@ -43,13 +43,16 @@ export function LeadForm() {
     setErrors(nextErrors)
     if (Object.keys(nextErrors).length > 0) return
 
+    const momento = String(data.get('momento') ?? '').trim()
+
     const lines = [
-      'Olá João! Quero garantir minha vaga na sessão de validação de ideia.',
+      'Olá João! Quero conversar sobre o momento do meu negócio.',
       '',
       `Nome: ${nome}`,
       `WhatsApp: ${whatsapp}`,
       email ? `E-mail: ${email}` : null,
-      `Minha ideia: ${ideia}`,
+      momento ? `Momento: ${momento}` : null,
+      `Sobre o negócio: ${ideia}`,
     ].filter((line): line is string => line !== null)
 
     const url = buildWhatsAppUrl(lines.join('\n'))
@@ -157,15 +160,37 @@ export function LeadForm() {
       </div>
 
       <div>
+        <label htmlFor="momento" className="text-sm font-semibold text-espresso">
+          Em que momento você está?{' '}
+          <span className="font-normal text-ink-soft">(opcional)</span>
+        </label>
+        <select
+          id="momento"
+          name="momento"
+          defaultValue=""
+          className={inputClass}
+        >
+          <option value="">Prefiro explicar na mensagem</option>
+          <option value="Validando uma ideia">Validando uma ideia</option>
+          <option value="Estruturando uma agência que já tem clientes">
+            Estruturando uma agência que já tem clientes
+          </option>
+          <option value="Crescendo uma agência que já funciona">
+            Crescendo uma agência que já funciona
+          </option>
+        </select>
+      </div>
+
+      <div>
         <label htmlFor="ideia" className="text-sm font-semibold text-espresso">
-          Qual é a sua ideia de negócio?
+          Conte em poucas linhas sobre a ideia ou a agência
         </label>
         <textarea
           id="ideia"
           name="ideia"
           required
           rows={4}
-          placeholder="Descreva em poucas linhas o que você quer validar..."
+          placeholder="O que você quer decidir ou melhorar agora?"
           aria-invalid={Boolean(errors.ideia)}
           aria-describedby={errors.ideia ? 'ideia-erro' : undefined}
           className={`${inputClass} resize-y`}
@@ -181,7 +206,7 @@ export function LeadForm() {
         type="submit"
         className="group inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-sm bg-bordeaux px-7 py-3.5 text-base font-semibold text-ivory transition-colors hover:bg-espresso"
       >
-        Quero garantir minha vaga
+        Enviar para o João no WhatsApp
         <ArrowRight
           aria-hidden="true"
           className="size-4 transition-transform group-hover:translate-x-1"

@@ -2,12 +2,16 @@ import { Plus } from 'lucide-react'
 
 const questions = [
   {
-    q: 'Para quem é esta sessão?',
-    a: 'Para quem tem uma ideia de negócio ainda no papel e quer saber se ela se sustenta antes de investir tempo e dinheiro.',
+    q: 'A sessão serve para quem ainda está começando?',
+    a: 'Sim. Ela foi desenhada para quem tem uma ideia de negócio ainda no papel e quer saber se ela se sustenta antes de investir tempo e dinheiro.',
+  },
+  {
+    q: 'E se minha agência já está funcionando?',
+    a: 'Conte o seu momento no formulário ou no WhatsApp. Eu avalio se a sessão de validação faz sentido para você ou se o ponto de partida é outro, e combinamos o formato juntos.',
   },
   {
     q: 'Como é a sessão?',
-    a: 'É uma conversa individual de 90 minutos. Passamos pelos 9 blocos do Business Model Canvas, testamos se eles se conectam e avaliamos o seu encaixe como fundador: tempo, dinheiro, habilidades, rede e estilo de vida.',
+    a: 'É uma conversa individual de 90 minutos. Passamos pelos nove blocos do Business Model Canvas, testamos se eles se conectam e avaliamos o seu encaixe como fundador: tempo, dinheiro, habilidades, rede e estilo de vida.',
   },
   {
     q: 'O que eu recebo no final?',
@@ -18,8 +22,12 @@ const questions = [
     a: 'Não. Eu garanto clareza sobre se a ideia tem chance e sobre o que fazer a seguir. Se ela não valer como está, pensamos juntos em um caminho mais viável.',
   },
   {
-    q: 'Como reservo minha vaga?',
-    a: 'Me chame no WhatsApp ou preencha o formulário desta página. Combinamos o melhor horário e você faz a sessão.',
+    q: 'Quem decide o que fazer depois?',
+    a: 'Você. Eu mostro o que enxergo na ideia e explico os motivos. O que fazer com isso é decisão sua.',
+  },
+  {
+    q: 'Como começo?',
+    a: 'Conte o momento do seu negócio pelo formulário ou chame no WhatsApp. Combinamos o melhor horário e você faz a sessão.',
   },
 ]
 

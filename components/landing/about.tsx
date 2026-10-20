@@ -4,7 +4,7 @@ export function About() {
   return (
     <section className="bg-cream" aria-labelledby="sobre-titulo">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:py-28">
-        <div className="relative lg:col-span-5">
+        <figure className="lg:col-span-5">
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-espresso">
             <Image
               src="/images/joao-moralins-bastidores.jpg"
@@ -14,16 +14,15 @@ export function About() {
               className="object-cover object-[50%_55%]"
             />
           </div>
-          <div
-            aria-hidden="true"
-            className="absolute -left-3 -top-3 h-16 w-16 border-l border-t border-bronze"
-          />
-        </div>
+          <figcaption className="mt-4 text-sm text-ink-soft">
+            Bastidores de uma gravação.
+          </figcaption>
+        </figure>
 
         <div className="lg:col-span-7">
           <p className="eyebrow flex items-center gap-4 text-bordeaux">
             <span aria-hidden="true" className="h-px w-10 bg-bronze" />
-            Quem conduz a sessão
+            Quem conduz a conversa
           </p>
           <h2
             id="sobre-titulo"
@@ -31,26 +30,20 @@ export function About() {
           >
             Firme no diagnóstico. Próximo no trato.
           </h2>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
-            Eu sou João Moralins, consultor de negócios. Trato a sua ideia com
-            respeito e com critério: quero entender o que você enxerga nela e,
-            ao mesmo tempo, dizer com clareza o que se sustenta e o que não.
-          </p>
-
-          <figure className="mt-10 grid gap-px overflow-hidden border border-bronze/60 bg-bronze/60 sm:grid-cols-2">
-            <blockquote className="bg-cream p-6">
-              <p className="eyebrow text-bordeaux">No diagnóstico</p>
-              <p className="mt-3 font-serif text-xl font-bold leading-snug text-espresso">
-                “Vale ou não vale. Eu te mostro por quê.”
-              </p>
-            </blockquote>
-            <blockquote className="bg-cream p-6">
-              <p className="eyebrow text-bordeaux">No trato</p>
-              <p className="mt-3 font-serif text-xl font-bold leading-snug text-espresso">
-                “Conta sua ideia. Eu quero entender o que você enxerga nela.”
-              </p>
-            </blockquote>
-          </figure>
+          <div className="mt-6 max-w-xl space-y-5 text-lg leading-relaxed text-ink-soft">
+            <p>
+              Sou João Moralins, consultor de novos negócios. Meu trabalho é
+              ajudar quem está abrindo ou tocando uma agência a decidir com
+              mais critério e menos suposição.
+            </p>
+            <p>
+              Quando você me conta a sua ideia, quero entender o que você
+              enxerga nela. Depois faço as perguntas difíceis: quais premissas
+              ainda não foram testadas, onde o modelo não fecha, o que falta
+              para a ideia se sustentar. Digo com clareza o que está de pé e o
+              que não está. A decisão continua sendo sua.
+            </p>
+          </div>
         </div>
       </div>
     </section>

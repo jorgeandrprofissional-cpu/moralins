@@ -23,21 +23,21 @@ const montserrat = Montserrat({
   display: 'swap',
 })
 
-const title = 'Descubra se sua ideia vale a pena | João Moralins'
+const title = 'João Moralins | Consultor de novos negócios para agências'
 const description =
-  'Sessão individual de 90 minutos para validar sua ideia de negócio antes de gastar tempo e dinheiro. Modelo de negócio completo, nota por bloco, veredito claro e plano de 30 dias.'
+  'Consultoria para quem quer abrir uma agência e para quem já tem uma. Comece por uma sessão individual de 90 minutos que termina com modelo de negócio, nota por bloco, veredito e plano de 30 dias.'
 
 export const metadata: Metadata = {
   title,
   description,
-  applicationName: 'João Moralins | Consultor de Negócios',
+  applicationName: 'João Moralins | Consultor de Novos Negócios',
   authors: [{ name: 'João Moralins' }],
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
     title,
     description,
-    siteName: 'João Moralins | Consultor de Negócios',
+    siteName: 'João Moralins | Consultor de Novos Negócios',
     images: [
       {
         url: '/images/joao-moralins-retrato.jpg',
