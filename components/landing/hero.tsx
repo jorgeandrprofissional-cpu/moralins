@@ -13,7 +13,7 @@ export function Hero() {
           </p>
 
           <h1 className="rise rise-delay-1 mt-6 font-serif text-[2.5rem] font-bold leading-[1.08] text-balance text-espresso sm:text-6xl lg:text-[3.6rem]">
-            Antes de investir na sua ideia, descubra se ela se sustenta.
+            Da ideia à negócio que cresce, com decisões que têm critério.
           </h1>
 
           <p className="rise rise-delay-2 mt-7 max-w-xl text-lg leading-relaxed text-espresso">
@@ -22,11 +22,11 @@ export function Hero() {
             próximos passos para os 30 dias seguintes.
           </p>
 
-          <p className="rise rise-delay-2 mt-5 max-w-xl leading-relaxed text-ink-soft">
+          {/* <p className="rise rise-delay-2 mt-5 max-w-xl leading-relaxed text-ink-soft">
             Sou João Moralins, consultor de novos negócios. Ajudo empreendedores
             a avaliar ideias, estruturar agências e tomar decisões com mais
             critério, antes de comprometer tempo e dinheiro.
-          </p>
+          </p> */}
 
           <div className="rise rise-delay-3 mt-9">
             <CtaLink href="#contato">Quero avaliar minha ideia</CtaLink>
