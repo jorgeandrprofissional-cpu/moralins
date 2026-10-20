@@ -3,9 +3,9 @@ import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import { LeadForm } from './lead-form'
 
 const steps = [
-  'Você me conta a ideia ou o momento da agência, pelo formulário ou pelo WhatsApp',
-  'Combinamos o melhor horário',
-  'Você faz a sessão e recebe o PDF completo',
+  'Você me conta sua ideia ou o momento atual da sua agência, pelo formulário ou WhatsApp',
+  'Combinamos um horário para a sessão',
+  'Analisamos seu negócio juntos e, ao final, você recebe seu Documento Estratégico com o veredito e o plano de ação para os próximos 30 dias',
 ]
 
 export function Booking() {

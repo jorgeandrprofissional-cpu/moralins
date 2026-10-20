@@ -36,7 +36,7 @@ export function Deliverables() {
             id="entregas-titulo"
             className="mt-5 font-serif text-3xl font-bold leading-tight text-balance sm:text-4xl"
           >
-            Um PDF com o veredito e os próximos 30 dias.
+            Um diagnóstico estratégico, o veredito e os próximos passos.
           </h2>
           <p className="mt-6 leading-relaxed text-cream/80">
             O veredito é um destes três.

@@ -15,7 +15,7 @@ const questions = [
   },
   {
     q: 'O que eu recebo no final?',
-    a: 'Um único PDF com o seu modelo de negócio, a nota de 0 a 10 por bloco, a pontuação de adequação fundador-negócio, o veredito e o plano de 30 dias. Depois, há um follow-up pelo WhatsApp.',
+    a: 'Você recebe um documento estratégico com seu modelo de negócio estruturado, uma avaliação de cada bloco com notas de 0 a 10, a pontuação de adequação entre você e o negócio, um veredito sobre a viabilidade da ideia e um plano de ação para os próximos 30 dias. Depois, fazemos um acompanhamento pelo WhatsApp para esclarecer dúvidas e orientar os próximos passos.',
   },
   {
     q: 'Você garante que meu negócio vai dar certo?',

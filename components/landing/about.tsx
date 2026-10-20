@@ -15,8 +15,7 @@ export function About() {
             />
           </div>
           <figcaption className="mt-4 text-sm text-ink-soft">
-            Bastidores de uma gravação.
-          </figcaption>
+                      </figcaption>
         </figure>
 
         <div className="lg:col-span-7">

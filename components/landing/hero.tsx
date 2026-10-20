@@ -43,7 +43,8 @@ export function Hero() {
             >
               sessão individual de 90 minutos
             </a>{' '}
-            que termina com um PDF e um plano para os próximos 30 dias.
+            para analisar seu negócio e definir os próximos passos, e chegar a um veredito e definir seu plano de ação para os próximos 30 dias.
+            {' '} 
           </p>
         </div>
 
