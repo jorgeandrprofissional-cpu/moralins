@@ -10,6 +10,7 @@ export function Hero() {
           <p className="eyebrow rise flex items-center gap-4 text-bordeaux">
             <span aria-hidden="true" className="h-px w-10 bg-bronze" />
             Consultoria para novos negócios
+            
           </p>
 
           <h1 className="rise rise-delay-1 mt-6 font-serif text-[2.5rem] font-bold leading-[1.08] text-balance text-espresso sm:text-6xl lg:text-[3.6rem]">
