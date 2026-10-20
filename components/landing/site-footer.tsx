@@ -6,7 +6,7 @@ export function SiteFooter() {
           João Moralins <span className="text-bronze">|</span> Consultor de Novos Negócios
         </p>
         <p className="text-sm text-cream/70">
-          Consultoria para agências e novos negócios
+          Consultoria para novos negócios
         </p>
       </div>
     </footer>

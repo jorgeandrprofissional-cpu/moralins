@@ -1,87 +1,73 @@
 const stages = [
   {
-    label: 'Validando',
+    title: 'Estou validando uma ideia',
     situation:
-      'Tenho uma ideia de agência, ou de um novo serviço, e ainda não sei se ela se sustenta.',
-    decision:
-      'Investir tempo e dinheiro agora, ajustar a ideia ou deixá-la de lado. Cada premissa é testada antes de custar caro.',
+      'Tenho uma ideia de agência ou de um novo serviço, mas ainda não sei se vale a pena investir nela.',
+    need: 'Precisamos avaliar as hipóteses, os riscos e o que deve ser testado antes de avançar.',
   },
   {
-    label: 'Estruturando',
+    title: 'Estou estruturando minha agência',
     situation:
-      'Os clientes chegam, mas cada projeto é resolvido no improviso e não sei o que me diferencia de outras agências.',
-    decision:
-      'O que definir primeiro: para quem a agência trabalha, o que ela oferece ou como a operação roda.',
+      'Já tenho clientes, mas ainda dependo muito do improviso e tenho dificuldade para definir meu diferencial.',
+    need: 'Precisamos identificar o que organizar primeiro para construir uma operação mais coerente.',
   },
   {
-    label: 'Crescendo',
+    title: 'Quero crescer com mais critério',
     situation:
-      'A agência funciona, existem várias frentes possíveis e não sei qual delas merece prioridade.',
-    decision:
-      'Qual gargalo corrigir antes de ampliar a equipe, a oferta ou a carteira de clientes.',
+      'Minha agência já funciona, mas não sei qual caminho priorizar: ampliar a oferta, conquistar novos clientes ou estruturar a operação.',
+    need: 'Precisamos entender os principais gargalos e identificar onde concentrar esforços.',
   },
 ]
 
 export function Stages() {
   return (
-    <section className="bg-cream" aria-labelledby="momentos-titulo">
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:py-28">
-        <div className="lg:col-span-4">
+    <section id="momento" className="bg-cream" aria-labelledby="momento-titulo">
+      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-24">
+        <div className="max-w-2xl">
           <p className="eyebrow flex items-center gap-4 text-bordeaux">
             <span aria-hidden="true" className="h-px w-10 bg-bronze" />
             Seu momento
           </p>
           <h2
-            id="momentos-titulo"
+            id="momento-titulo"
             className="mt-5 font-serif text-3xl font-bold leading-tight text-balance text-espresso sm:text-4xl"
           >
-            A pergunta certa depende da fase em que a agência está.
+            Qual decisão você precisa tomar agora?
           </h2>
-          <p className="mt-6 text-ink-soft leading-relaxed">
-            Desorganização, oferta parecida com a de todo mundo e decisões que
-            se contradizem costumam nascer de fundamentos mal definidos. Por
-            isso a conversa começa pelo diagnóstico, antes de qualquer
-            recomendação.
+          <p className="mt-5 text-lg leading-relaxed text-ink-soft">
+            Cada fase de um negócio traz desafios diferentes. O primeiro passo
+            é entender seu momento para identificar o que merece atenção.
           </p>
         </div>
 
-        <div className="lg:col-span-8">
-          <p className="text-sm text-ink-soft">
-            Três pontos de partida possíveis:
-          </p>
-          <ol className="mt-4 border-t border-espresso/30">
-            {stages.map((stage) => (
-              <li
-                key={stage.label}
-                className="grid gap-4 border-b border-espresso/30 py-8 sm:grid-cols-[9rem_1fr] sm:gap-8"
-              >
-                <p className="eyebrow pt-2 text-bordeaux">{stage.label}</p>
-                <div>
-                  <p className="font-serif text-xl font-bold leading-snug text-espresso sm:text-2xl">
-                    {stage.situation}
-                  </p>
-                  <p className="mt-4 leading-relaxed text-ink-soft">
-                    <span className="font-semibold text-espresso">
-                      A decisão em jogo:{' '}
-                    </span>
-                    {stage.decision}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ol>
-
-          <p className="mt-8 text-ink-soft">
-            Não sabe em qual está?{' '}
-            <a
-              href="#contato"
-              className="font-semibold text-espresso underline decoration-bronze decoration-2 underline-offset-4 hover:text-bordeaux"
+        <ul className="mt-12 grid gap-6 md:grid-cols-3">
+          {stages.map((stage) => (
+            <li
+              key={stage.title}
+              className="flex flex-col border-t-2 border-bronze bg-ivory p-7"
             >
-              Conte como está hoje
-            </a>{' '}
-            e eu ajudo a identificar.
-          </p>
-        </div>
+              <h3 className="font-serif text-xl font-bold leading-snug text-espresso">
+                {stage.title}
+              </h3>
+              <p className="mt-4 leading-relaxed text-ink-soft">
+                {stage.situation}
+              </p>
+              <p className="mt-5 border-t border-espresso/15 pt-5 italic leading-relaxed text-espresso">
+                {stage.need}
+              </p>
+            </li>
+          ))}
+        </ul>
+
+        <p className="mt-10 text-ink-soft">
+          Não sabe exatamente em qual momento está?{' '}
+          <a
+            href="#contato"
+            className="font-semibold text-espresso underline decoration-bronze decoration-2 underline-offset-4 hover:text-bordeaux"
+          >
+            Conte sua situação e vamos entender por onde começar.
+          </a>
+        </p>
       </div>
     </section>
   )

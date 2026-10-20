@@ -2,9 +2,10 @@ import { MessageCircle } from 'lucide-react'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
 const links = [
-  { href: '#jornada-titulo', label: 'Jornada' },
-  { href: '#sessao', label: 'Sessão' },
-  { href: '#faq-titulo', label: 'Perguntas' },
+  { href: '#momento', label: 'Seu momento' },
+  { href: '#sessao', label: 'A sessão' },
+  { href: '#sobre', label: 'Sobre' },
+  { href: '#faq', label: 'Perguntas' },
 ]
 
 export function SiteHeader() {

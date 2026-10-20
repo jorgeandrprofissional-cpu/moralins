@@ -9,59 +9,52 @@ export function Hero() {
         <div className="lg:col-span-7">
           <p className="eyebrow rise flex items-center gap-4 text-bordeaux">
             <span aria-hidden="true" className="h-px w-10 bg-bronze" />
-            Consultoria para agências e novos negócios
+            Consultoria para novos negócios
           </p>
 
-          <h1 className="rise rise-delay-1 mt-6 font-serif text-[2.5rem] font-bold leading-[1.08] text-balance text-espresso sm:text-6xl lg:text-[4rem]">
-            Da ideia à agência que cresce, com decisões que têm critério.
+          <h1 className="rise rise-delay-1 mt-6 font-serif text-[2.5rem] font-bold leading-[1.08] text-balance text-espresso sm:text-6xl lg:text-[3.6rem]">
+            Antes de investir na sua ideia, descubra se ela se sustenta.
           </h1>
 
-          <p className="rise rise-delay-2 mt-7 max-w-xl text-lg leading-relaxed text-ink-soft">
-            Sou João Moralins, consultor de novos negócios. Acompanho quem quer
-            abrir uma agência e quem já tem uma funcionando, avaliando a ideia,
-            a oferta e as prioridades, e dizendo com clareza o que se sustenta
-            e o que não.
+          <p className="rise rise-delay-2 mt-7 max-w-xl text-lg leading-relaxed text-espresso">
+            Uma sessão individual de 90 minutos para avaliar seu modelo de
+            negócio, identificar os pontos que precisam de atenção e definir os
+            próximos passos para os 30 dias seguintes.
           </p>
 
-          <div className="rise rise-delay-3 mt-9 flex flex-col gap-5 sm:flex-row sm:items-center">
-            <CtaLink href="#contato">Conversar sobre o meu negócio</CtaLink>
-            <a
-              href={buildWhatsAppUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold text-espresso underline decoration-bronze decoration-2 underline-offset-8 transition-colors hover:text-bordeaux"
-            >
-              Prefiro chamar no WhatsApp
-            </a>
+          <p className="rise rise-delay-2 mt-5 max-w-xl leading-relaxed text-ink-soft">
+            Sou João Moralins, consultor de novos negócios. Ajudo empreendedores
+            a avaliar ideias, estruturar agências e tomar decisões com mais
+            critério, antes de comprometer tempo e dinheiro.
+          </p>
+
+          <div className="rise rise-delay-3 mt-9">
+            <CtaLink href="#contato">Quero avaliar minha ideia</CtaLink>
+            <p className="mt-6 text-sm text-ink-soft">
+              Prefere conversar primeiro?{' '}
+              <a
+                href={buildWhatsAppUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-espresso underline decoration-bronze decoration-2 underline-offset-4 transition-colors hover:text-bordeaux"
+              >
+                Fale comigo pelo WhatsApp
+              </a>
+            </p>
           </div>
-
-          <p className="mt-10 max-w-md border-l-2 border-bronze pl-4 text-sm leading-relaxed text-ink-soft">
-            O primeiro passo é uma{' '}
-            <a
-              href="#sessao"
-              className="font-semibold text-espresso underline decoration-bronze underline-offset-4 hover:text-bordeaux"
-            >
-              sessão individual de 90 minutos
-            </a>{' '}
-            que termina com um PDF e um plano para os próximos 30 dias.
-          </p>
         </div>
 
         <figure className="mx-auto w-full max-w-md lg:col-span-5 lg:max-w-none">
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-cream">
             <Image
               src="/images/joao-moralins-retrato.jpg"
-              alt="João Moralins, consultor de negócios, sentado em uma poltrona, de camisa social clara, com a mão apoiada no queixo"
+              alt="João Moralins, consultor de novos negócios, sentado em uma poltrona, de camisa social clara, com a mão apoiada no queixo"
               fill
               priority
               sizes="(min-width: 1024px) 40vw, 90vw"
               className="object-cover object-[50%_28%]"
             />
           </div>
-          <figcaption className="mt-4 flex items-center gap-4 text-sm text-ink-soft">
-            <span aria-hidden="true" className="h-px w-8 bg-bronze" />
-            João Moralins, consultor de novos negócios
-          </figcaption>
         </figure>
       </div>
     </section>

@@ -23,9 +23,9 @@ const montserrat = Montserrat({
   display: 'swap',
 })
 
-const title = 'João Moralins | Consultor de novos negócios para agências'
+const title = 'João Moralins | Consultoria de validação de ideia de negócio'
 const description =
-  'Consultoria para quem quer abrir uma agência e para quem já tem uma. Comece por uma sessão individual de 90 minutos que termina com modelo de negócio, nota por bloco, veredito e plano de 30 dias.'
+  'Sessão individual de 90 minutos para avaliar seu modelo de negócio, identificar os pontos que precisam de atenção e definir os próximos passos para os 30 dias seguintes.'
 
 export const metadata: Metadata = {
   title,
