@@ -43,8 +43,6 @@ export function Hero() {
               </a>
             </p>
           </div>
-<<<<<<< HEAD
-=======
 
           <p className="mt-10 max-w-md border-l-2 border-bronze pl-4 text-sm leading-relaxed text-ink-soft">
             O primeiro passo é uma{' '}
@@ -57,7 +55,6 @@ export function Hero() {
             para analisar seu negócio e definir os próximos passos, e chegar a um veredito e definir seu plano de ação para os próximos 30 dias.
             {' '} 
           </p>
->>>>>>> 32c0533 (algumas alterações)
         </div>
 
         <figure className="mx-auto w-full max-w-md lg:col-span-5 lg:max-w-none">

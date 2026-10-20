@@ -2,15 +2,6 @@ import { MessageCircle } from 'lucide-react'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import { LeadForm } from './lead-form'
 
-<<<<<<< HEAD
-=======
-const steps = [
-  'Você me conta sua ideia ou o momento atual da sua agência, pelo formulário ou WhatsApp',
-  'Combinamos um horário para a sessão',
-  'Analisamos seu negócio juntos e, ao final, você recebe seu Documento Estratégico com o veredito e o plano de ação para os próximos 30 dias',
-]
-
->>>>>>> 32c0533 (algumas alterações)
 export function Booking() {
   return (
     <section
