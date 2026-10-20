@@ -14,6 +14,11 @@ export function About() {
               className="object-cover object-[50%_55%]"
             />
           </div>
+<<<<<<< HEAD
+=======
+          <figcaption className="mt-4 text-sm text-ink-soft">
+                      </figcaption>
+>>>>>>> 32c0533 (algumas alterações)
         </figure>
 
         <div className="lg:col-span-8">

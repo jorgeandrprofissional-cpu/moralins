@@ -14,8 +14,13 @@ const questions = [
     a: 'Não. A análise identifica riscos e hipóteses que precisam ser testadas, mas não substitui a validação com clientes reais nem garante resultados financeiros.',
   },
   {
+<<<<<<< HEAD
     q: 'Preciso contratar uma consultoria depois?',
     a: 'Não. A sessão tem seus próprios objetivos e entregáveis. Qualquer trabalho posterior pode ser discutido separadamente.',
+=======
+    q: 'O que eu recebo no final?',
+    a: 'Você recebe um documento estratégico com seu modelo de negócio estruturado, uma avaliação de cada bloco com notas de 0 a 10, a pontuação de adequação entre você e o negócio, um veredito sobre a viabilidade da ideia e um plano de ação para os próximos 30 dias. Depois, fazemos um acompanhamento pelo WhatsApp para esclarecer dúvidas e orientar os próximos passos.',
+>>>>>>> 32c0533 (algumas alterações)
   },
   {
     q: 'Como faço para começar?',

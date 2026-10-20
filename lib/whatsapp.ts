@@ -1,5 +1,5 @@
 // Defina o número real (DDI + DDD + número) em NEXT_PUBLIC_WHATSAPP_NUMBER. O valor padrão é apenas um marcador.
-const PLACEHOLDER_NUMBER = '5521999999999'
+const PLACEHOLDER_NUMBER = '5521975471296'
 
 export const WHATSAPP_NUMBER = (
   process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || PLACEHOLDER_NUMBER
