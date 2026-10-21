@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+
 export function About() {
   return (
     <section id="sobre" className="bg-ivory" aria-labelledby="sobre-titulo">
