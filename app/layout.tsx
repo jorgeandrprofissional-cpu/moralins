@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Inter, Montserrat, Playfair_Display } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 
 const playfair = Playfair_Display({
@@ -78,6 +79,18 @@ export default function RootLayout({
     >
       <body>
         {children}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SP4YGPPSZ6"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SP4YGPPSZ6');
+          `}
+        </Script>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
